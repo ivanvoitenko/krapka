@@ -1,0 +1,31 @@
+User-agent: *
+
+Disallow: /page/
+Disallow: /*author
+Disallow: /category/
+Disallow: /2018/
+Disallow: /2017/
+Disallow: /feed/
+Disallow: /add-new-post/
+Disallow: /wp-content/
+Disallow: /*?replytocom=
+Disallow: /*?
+
+Allow: /wp-includes/css/
+Allow: /wp-includes/js/
+Allow: /wp-includes/images/
+
+Allow: /wp-content/*.css
+Allow: /wp-content/*.js
+Allow: /wp-content/*.png
+Allow: /wp-content/*.jpg
+Allow: /wp-content/*.jpeg
+Allow: /wp-content/*.gif
+Allow: /wp-content/*.svg
+Allow: /wp-content/*.fonts*
+
+Allow: /wp-admin/admin-ajax.php*
+
+Noindex: /?sortby
+
+Sitemap: https://krapka.club/sitemap.xml

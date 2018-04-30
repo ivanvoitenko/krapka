@@ -1,0 +1,97 @@
+/* ========================================================================
+   Component: Pagination
+ ========================================================================== */
+/*
+ * 1. Allow items to wrap into the next line
+ * 2. Gutter
+ * 3. Reset lists
+ */
+.uk-pagination {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  /* 1 */
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  /* 2 */
+  margin-left: -20px;
+  /* 3 */
+  padding: 0;
+  list-style: none;
+}
+/*
+ * 1. Space is allocated solely based on content dimensions: 0 0 auto
+ * 2. Gutter
+ * 3. Create position context for dropdowns
+ */
+.uk-pagination > * {
+  /* 1 */
+  -ms-flex: none;
+  -webkit-flex: none;
+  flex: none;
+  /* 2 */
+  padding-left: 20px;
+  display: inline-block;
+  /* 3 */
+  position: relative;
+}
+/* Items
+ ========================================================================== */
+/*
+ * 1. Prevent gap if child element is `inline-block`, e.g. an icon
+ * 2. Style
+ */
+.uk-pagination > * > * {
+  /* 1 */
+  display: block;
+  /* 2 */
+  color: #999;
+  -webkit-transition: color 0.1s ease-in-out;
+  transition: color 0.1s ease-in-out;
+}
+/* Hover + Focus */
+.uk-pagination > * > :hover,
+.uk-pagination > * > :focus {
+  color: #666;
+  text-decoration: none;
+}
+/* Active */
+.uk-pagination > .uk-active > * {
+  color: #666;
+}
+/* Disabled */
+.uk-pagination > .uk-disabled > * {
+  color: #999;
+}
+
+/* Alignment
+ ========================================================================== */
+/*
+ * Align items along the main axis of the current line of the flex container
+ * Row: Horizontal
+ */
+.uk-flex-left {
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+}
+.uk-flex-center {
+  display: block;
+  margin: auto;
+}
+.uk-flex-right {
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+}
+.uk-flex-between {
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+.uk-flex-around {
+  -ms-flex-pack: distribute;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+}

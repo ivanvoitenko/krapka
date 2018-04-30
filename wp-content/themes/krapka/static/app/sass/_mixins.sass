@@ -1,0 +1,197 @@
+@mixin flexbox() 
+  display: -webkit-box
+  display: -moz-box
+  display: -ms-flexbox
+  display: -webkit-flex
+  display: flex
+
+
+@mixin flex($values) 
+  -webkit-box-flex: $values
+  -moz-box-flex:  $values
+  -webkit-flex:  $values
+  -ms-flex:  $values
+  flex:  $values
+
+
+@mixin order($val) 
+  -webkit-box-ordinal-group: $val
+  -moz-box-ordinal-group: $val    
+  -ms-flex-order: $val     
+  -webkit-order: $val  
+  order: $val
+
+@mixin first-child() 
+  &:first-of-type 
+    @content
+
+@mixin last-child() 
+  &:last-of-type 
+    @content
+  
+@mixin even()
+  &:nth-child(even) 
+    @content
+  
+@mixin h1($color)
+  color: $color
+  font-family: $main-font
+  font-size: $h1-size
+  font-weight: $h1-weight
+
+@mixin h2a($color)
+  color: $color
+  font-family: $main-font
+  font-size: $h2a-size
+  font-weight: $h2a-weight
+
+@mixin h2b($color)
+  color: $color
+  font-family: $main-font
+  font-size: $h2b-size
+  font-weight: $h2b-weight
+
+@mixin h3($color)
+  color: $color
+  font-family: $quote-font
+  font-size: $h3-size
+  font-weight: $h3-weight
+
+@mixin text1($color)
+  color: $color
+  font-family: $second-font
+  font-size: $text1-size
+
+@mixin text2($color)
+  color: $color
+  font-family: $second-font
+  font-size: $text2-size
+  line-height: 16px
+
+@mixin text3($color)
+  color: $color
+  font-family: $second-font
+  font-size: $text3-size
+  font-weight: $text3-weight
+
+@mixin text4($color)
+  color: $color
+  font-family: $second-font
+  font-size: $text4-size
+
+@mixin quote($color)
+  color: $color
+  font-family: $second-font
+  font-size: $quote-size
+
+/* Underline From Left */
+@mixin underline-from-left 
+  $duration: $slowDuration
+
+  @include hacks()
+  position: relative
+  overflow: hidden
+
+  &:before 
+    content: ""
+    position: absolute
+    z-index: -1
+    left: 0
+    right: 100%
+    bottom: 0
+    background: $activeColor
+    height: 4px
+    @include prefixed(transition-property, "right")
+    @include prefixed(transition-duration, $duration)
+    @include prefixed(transition-timing-function, ease-out)
+  
+
+  &:hover,
+  &:focus,
+  &:active 
+
+    &:before 
+      right: 0
+    
+/* Overline From Left */
+@mixin overline-from-left 
+  $duration: $mediumDuration
+
+  @include hacks()
+  position: relative
+  overflow: hidden
+
+  &:before 
+    content: ""
+    position: absolute
+    z-index: -1
+    left: 0
+    right: 100%
+    top: 0
+    background: $activeColor
+    height: 4px
+    @include prefixed(transition-property, "right")
+    @include prefixed(transition-duration, $duration)
+    @include prefixed(transition-timing-function, ease-out)
+  
+
+  &:hover,
+  &:focus,
+  &:active 
+
+    &:before 
+      right: 0
+    
+/* Forward */
+@mixin forward 
+  @include hacks()
+  @include prefixed(transition-duration, $mediumDuration)
+  @include prefixed(transition-property, transform)
+
+  &:hover,
+  &:focus,
+  &:active 
+    @include prefixed(transform, translateX(8px))
+
+
+/* Bounce To Top */
+@mixin bounce-to-top 
+  @include hacks()
+  position: relative
+  @include prefixed(transition-property, color)
+  @include prefixed(transition-duration, $slowDuration)
+
+  &:before 
+    content: ""
+    position: absolute
+    z-index: 1
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background-color: rgba(0, 0, 0, 0.79);
+    @include prefixed(transform, scaleY(0))
+    @include prefixed(transform-origin, 50% 100%)
+    @include prefixed(transition-property, transform)
+    @include prefixed(transition-duration, $slowDuration)
+    @include prefixed(transition-timing-function, ease-out)
+  
+
+  &:hover,
+  &:focus,
+  &:active 
+    color: white
+
+    &:before 
+      @include prefixed(transform, scaleY(1))
+      @include prefixed(transition-timing-function, cubic-bezier(.52,1.64,.37,.66))
+    
+  
+
+
+  
+
+
+  
+
+

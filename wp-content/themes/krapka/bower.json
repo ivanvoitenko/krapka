@@ -1,0 +1,15 @@
+{
+  "name": "sdlab",
+  "homepage": "https://sdlab.com.ua",
+  "authors": [
+    "SDLab <info@sdlab.com.ua>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "goodshare": "^4.0.6",
+    "slick-carousel": "^1.7.1",
+    "magnific-popup": "^1.1.0",
+    "jquery.maskedinput": "^1.4.1"
+  }
+}

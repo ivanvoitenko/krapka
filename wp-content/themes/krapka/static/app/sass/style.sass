@@ -1,0 +1,1251 @@
+@import "settings"
+@import "mixins"
+@import "mixins-2"
+@import "options"
+@import "hacks"
+@import "bubble-bottom"
+
+//colors
+$white: #fff
+$color_flamingo_approx: #eb5a23
+$color_cararra_approx: #ececec
+$color_nobel_approx: #b6b6b6
+$black: #000
+$mercury: #e5e5e5
+$color_gray_nurse_approx: #a7a7a7
+$color_tia_maria_approx: #c54514
+$color_jaffa_approx: #f5853b
+$color_punch_approx: #de431e
+$color_mine_shaft_approx: #333
+$concrete: #f2f2f2
+$black_10: rgba(0, 0, 0, .1)
+$black_5: rgba(0, 0, 0, .05)
+$color_iron_approx: #d7d7d7
+$color_shady_lady_approx: #a7a7a7
+$color_celeste_approx: #d0d0d0
+$black_16: rgba(0, 0, 0, 0.16)
+$black_20: rgba(0, 0, 0, 0.2)
+$color_shark_approx: #262626
+$color_pomegranate_approx: #e3431c
+$color_flame_pea_approx: #e75c38
+$color_star_dust_approx: #9a9a9a
+$color_concrete_approx: #f3f3f3
+$silver: #c0c0c0
+$color_masala_approx: #3d3d3d
+$color_bon_jour_approx: #e0e0e0
+$color_silver_chalice_approx: #ababab
+$color_royal_purple_approx: #639
+
+//fonts
+$font_1: Open Sans
+
+body
+	background: $white
+
+.article-page, .expert-opinion-page, .exp, .about-page, .expert-page, .topic-page-section, .donate-page, .settings-section
+	background-color: #f2f2f2
+	padding-bottom: 30px
+
+.orange
+	color: $color_flamingo_approx !important
+
+.logo
+	padding: 15px 5px
+
+.navbar-brand
+	padding: 15px
+
+.search
+	position: relative
+	i
+		position: absolute
+		bottom: 21px
+		left: 30px
+		font-size: 18px
+
+	input
+		display: block
+		margin: auto
+		width: 269px
+		padding: 0
+		padding-left: 40px
+		//If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+		border-radius: 15px
+		border: 2px solid $mercury
+		margin-top: 15px
+		height: 35px
+
+
+
+	input::placeholder
+		color: $color_gray_nurse_approx
+		font-style: italic
+
+.article-image-block
+	display: table
+	margin: auto
+	img
+		width: initial !important
+		display: inline-block
+		margin: 0px 5px
+.user
+	padding: 9px
+	cursor: pointer
+
+.online
+	width: 12px
+	height: 12px
+	border: 2px solid $white
+	background-color: $color_flamingo_approx
+	bottom: 5%
+	left: 5%
+	z-index: 999
+
+.uk-pagination
+	justify-content: center
+	align-items: center
+	margin: 0px
+	&>*>*
+		color: #EB5A23
+		font-family: "Open Sans"
+		font-size: 14px
+	&> .uk-active > *
+		background-color: #EB5A23
+		color: #fff
+		padding: 3px 10px
+		border-radius: 25px
+	.uk-pagination-next, .uk-pagination-previous
+		i
+			padding: 5px
+			font-size: 20px
+
+.reset-padding
+	padding: 0px
+
+.oval
+	display: inline-block
+	width: 8px
+	height: 8px
+	margin-left: 5px
+	//If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+	border-radius: 5px
+	background-color: $color_flamingo_approx
+
+.oval-online
+	display: inline-block
+	width: 12px
+	height: 12px
+	border: 2px solid #ffffff
+	background-color: #eb5a23
+	border-radius: 12px
+	position: absolute
+	bottom: 10px
+	left: 10px
+
+.login
+	color: #262626
+	font-size: 14px
+	padding: 20px
+	display: block
+
+.h-550px
+	height: 550px
+
+.article-block
+	background: $white
+	background-position: center
+	background-repeat: no-repeat
+	background-size: cover
+	//If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+	border-radius: 2px
+	//If you use compass, instead of the line below you could use + box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.16)
+	margin-bottom: 10px
+	moz-background-size: cover
+	moz-border-radius: 2px
+	moz-box-shadow: 1px 1px 4px $black_10
+	o-transition: box-shadow .3s
+	position: relative
+	//If you use compass, instead of the line below you could use + transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+	transition: box-shadow .3s
+	webkit-border-radius: 2px
+	webkit-box-shadow: 1px 1px 4px $black_10
+	&:hover
+		//If you use compass, instead of the line below you could use + box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 1px 1px 20px $black_10
+		moz-box-shadow: 1px 1px 20px $black_10
+		webkit-box-shadow: 1px 1px 20px $black_10
+
+	&:before
+		border: 1px solid $black_5
+		//If you use compass, instead of the line below you could use + box-sizing($bs)
+		box-sizing: border-box
+		content: ''
+		display: block
+		left: 0
+		moz-box-sizing: border-box
+		position: absolute
+		top: 0
+		webkit-box-sizing: border-box
+		width: 100%
+		z-index: 3
+
+	&.image-top
+		.article-block__image
+			height: 200px
+			position: relative
+
+		.article-block__info
+			background: $white
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+			min-height: calc(100% - 200px)
+			moz-box-direction: normal
+			moz-box-orient: vertical
+			moz-box-pack: justify
+			ms-flex-direction: column
+			ms-flex-pack: justify
+			position: absolute
+			webkit-box-direction: normal
+			webkit-box-orient: vertical
+			webkit-box-pack: justify
+			webkit-flex-direction: column
+			webkit-justify-content: space-between
+			width: 100%
+
+
+	.posts
+		font-size: 14px
+		color: $color_shady_lady_approx
+
+		i
+			color: $color_flamingo_approx
+			margin-right: 5px
+
+
+.article-block__image
+	background-position: center
+	background-repeat: no-repeat
+	background-size: cover
+	height: 100%
+	moz-background-size: cover
+	position: absolute
+	width: 100%
+
+.page-section
+	background-color: $concrete
+	padding-bottom: 40px
+
+.cat
+	border-radius: 2px
+	border: 2px solid $color_flamingo_approx
+	padding: 5px 9px
+	display: inline-block
+	color: $color_mine_shaft_approx
+
+	font-size: 14px
+	font-weight: 700
+	text-transform: uppercase
+
+
+.time-center
+	text-align: center
+
+.block-header
+	margin-bottom: 10px
+	display: block
+
+.author
+	img
+		width: 45px
+		height: 45px
+		//If you use compass, instead of the line below you could use + box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: none
+		margin-right: 10px
+
+	a
+		color: $color_shady_lady_approx
+
+		font-size: 14px
+
+
+.block-bottom
+	.author
+		display: inline-block
+
+	a
+		display: inline-block
+
+.large-block
+	height: 100%
+	//If you use compass, instead of the line below you could use + box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 0 2px 4px $black_16
+	//If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+	border-radius: 2px
+	background-color: $white
+	.block-header
+		color: $color_mine_shaft_approx
+		font-family: $font_1
+		font-size: 24px
+		font-weight: 700
+		line-height: 36px
+
+
+.small-block-228px
+	margin-bottom: 10px
+	height: 220px
+	//If you use compass, instead of the line below you could use + box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 0 2px 4px $black_16
+	//If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+	border-radius: 2px
+	background-color: $white
+
+.small-block-275px
+	height: 275px
+	//If you use compass, instead of the line below you could use + box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 0 2px 4px $black_16
+	//If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+	border-radius: 2px
+	background-color: $white
+
+.large-block-col-12
+	.block
+		margin-bottom: 0px
+		//If you use compass, instead of the line below you could use + box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: 0 2px 4px $black_20
+
+.image-wide-block
+	height: 350px
+	//If you use compass, instead of the line below you could use + box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: none
+
+	div
+		color: $white
+		//If you use compass, instead of the line below you could use + text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		text-shadow: none
+
+	> .article-block__image
+		position: relative
+
+
+.moreExperts
+
+	background-color: $color_mine_shaft_approx
+	.article-block__image
+		height: 70%
+		background-size: inherit
+		display: block
+
+	.block-header
+		color: $white
+		//If you use compass, instead of the line below you could use + text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		text-shadow: none
+		font-family: $font_1
+		font-size: 18px
+		font-weight: 700
+
+
+.experts
+	//If you use compass, instead of the line below you could use + text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	text-shadow: none
+	color: $color_shady_lady_approx
+
+	font-size: 14px
+	i
+		margin-right: 5px
+		color: $color_pomegranate_approx
+
+
+.article-page-section
+	background-color: $concrete
+	padding-bottom: 40px
+
+.sidebar
+	background-color: $white
+	padding: 20px
+
+.sidebar-title
+	color: $color_punch_approx
+	font-size: 16px
+	font-weight: 700
+	text-align: center
+
+.sidebar-text
+	color: $color_mine_shaft_approx
+	font-size: 14px
+	font-weight: 700
+	margin-top: 25px
+	li
+		margin-bottom: 20px
+
+::-webkit-scrollbar
+	width: 5px
+
+::-webkit-scrollbar-track
+	//If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+	border-radius: 10px
+
+::-webkit-scrollbar-thumb
+	//If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+	border-radius: 10px
+	background: $color_star_dust_approx
+	&:window-inactive
+		background: $color_concrete_approx
+
+
+.comment
+	display: inline-block
+	margin-bottom: 20px
+	.author-name
+		color: $color_mine_shaft_approx
+		font-family: $font_1
+		font-size: 14px
+		font-weight: 700
+		line-height: 20px
+		display: inline-block
+		i
+			color: $color_shady_lady_approx
+
+
+	.comment-time
+		float: right
+		display: inline-block
+		color: $color_nobel_approx
+		font-family: $font_1
+		font-size: 12px
+		line-height: 20px
+
+	.comment-text
+		display: block
+		padding-top: 10px
+
+.flexWrapper
+	display: flex
+	flex-wrap: wrap
+	flex-direction: row
+
+.flexGroup
+	display: flex
+	flex-wrap: wrap
+	flex-direction: row
+
+.test
+	color: $color_royal_purple_approx
+
+ul > li a:hover
+	
+
+input:focus
+	outline: none
+
+.topbarMenu ul
+	list-style-type: none
+	padding-top: 5px
+	margin-bottom: 12px
+	li
+		display: inline
+		padding-left: 10px
+		padding-right: 10px
+		font-size: 15px
+
+		&:first-child
+			padding-left: 0
+		.orange
+			font-weight: 500
+
+
+
+.article-header .block
+	.block-header
+		color: $color_flamingo_approx
+		font-family: $font_1
+		font-size: 28px
+		font-weight: 700
+		line-height: 38px
+
+	.block-bottom
+		position: relative
+		bottom: 0
+		width: 100%
+
+.exp
+	.expert-opinion-tags-block
+		width: 100%
+		padding: 10px 0 0
+
+		.tags-block-title
+			color: #262626
+			font-size: 14px
+
+		.actual-tags
+			display: inline-block
+			text-shadow: none
+			padding: 0px 10px
+			list-style: none
+			margin: 0px
+			li
+				display: inline-block
+				padding: 3px 16px 5px
+				background-color: #4d4d4d
+				border-radius: 10px
+				
+				a
+					color: #ffffff
+
+					font-size: 14px
+	.expert-opinion-right-tags
+		display: inline-block
+		float: right
+		.dropdown-menu
+			right: 0
+			left: initial
+			.tags-column
+				ul
+					list-style: none
+					padding: 10px 10px
+					li
+						margin-bottom: 5px
+						padding: 0px 10px
+						&:hover
+							border-radius: 5px
+							background-color: #333333
+							text-shadow: none
+							a
+								color: #fff
+
+	.flex-row
+		display: flex
+		flex-wrap: wrap
+
+
+.about-block
+	background-color: #fff
+	padding: 20px
+
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2)
+	border-radius: 2px
+	p
+		color: #333333
+
+		font-size: 18px
+		line-height: 27px
+
+
+.expert-about-block
+	background-color: #fff
+	padding: 20px
+	padding-bottom: 18px
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2)
+	border-radius: 2px
+	text-shadow: none
+	.quote
+		color: #9d9d9d
+		font-size: 20px
+		line-height: 30px
+		text-shadow: none
+		font-style: italic
+	i
+		color: #e3431c
+		font-size: 40px
+	.block-line
+		display: table
+		margin: auto
+		.small-line
+			width: 74px
+			height: 2px
+			border: 3px solid #eb5a23
+			display: inline-block
+	.expert-about-block-bottom-text
+
+		font-size: 18px
+		line-height: 27px
+		.orange
+			text-decoration: underline
+.video-row
+	.block
+		padding-top: 14px
+		margin: 0px
+	.block-header
+		clear: both
+.expert-page
+	padding-bottom: 0px
+	.row
+		margin-bottom: 30px
+	.expert-about-block
+		margin-top: 30px
+.topic-section
+
+	.cat
+		font-family: "Open Sans"
+		font-size: 28px
+		font-weight: 700
+		text-transform: uppercase
+		color: #fff
+		box-shadow: none
+	h2
+		margin-bottom: 35px
+
+.topic-page-section
+	.cat-block
+		margin: 10px 0
+		display: inline-block
+		background-color: #fff
+		padding: 5px 10px
+		margin-right: 10px
+
+		font-size: 14px
+		font-weight: 700
+		text-transform: uppercase
+
+	.orange-cat-block
+		background-color: #eb5a23
+		color: #fff
+		@include bubble-bottom()
+	.expert-opinion-tags-block
+		padding: 0px
+
+	.expert-opinion-right-tags
+		margin: 10px 0px
+
+.community-page
+	padding-top: 30px
+	.row
+		display: flex
+		flex-wrap: wrap
+		&:last-child
+			justify-content: center
+			margin-bottom: 34px
+
+		.user-item
+			margin-bottom: 30px
+			img
+				display: block
+				margin: auto
+
+			h2
+				color: #333333
+				font-family: "Open Sans"
+				font-size: 14px
+				font-weight: 700
+				text-align: center
+				margin-top: 10px
+
+.black-but
+	width: 110px
+	height: 41px
+	border-radius: 4px
+	background-image: linear-gradient(180deg, #656565 0%, #333333 100%)
+	color: #ffffff
+
+	font-size: 14px
+	border: none
+
+.image-source-link
+	color: #98C3D1
+
+
+.mfp-with-zoom .mfp-container, .mfp-with-zoom.mfp-bg
+	opacity: 0
+	transition: all 0.3s ease-out
+
+
+.mfp-with-zoom.mfp-ready .mfp-container
+		opacity: 1
+
+.mfp-with-zoom.mfp-ready.mfp-bg
+		opacity: 0.8
+
+
+.mfp-with-zoom.mfp-removing .mfp-container,
+.mfp-with-zoom.mfp-removing.mfp-bg
+	opacity: 0
+
+/* Styles for dialog window */
+#small-dialog
+	background: white
+	text-align: left
+	max-width: 590px
+	position: relative
+	border-radius: 4px
+	margin: auto
+	h1
+		color: #333333
+		font-family: "Open Sans"
+		font-size: 18px
+		font-weight: 700
+		line-height: 27px
+		margin-bottom: 18px
+		text-align: center
+	p
+		color: #333333
+
+		font-size: 14px
+		line-height: 21px
+		margin-bottom: 17px
+	.mfp-close
+		top: -7px
+
+
+/**
+ * Fade-zoom animation for first dialog
+ */
+
+/* start state */
+.my-mfp-zoom-in .zoom-anim-dialog
+	opacity: 0
+
+	-webkit-transition: all 0.2s ease-in-out
+	-moz-transition: all 0.2s ease-in-out
+	-o-transition: all 0.2s ease-in-out
+	transition: all 0.2s ease-in-out
+
+
+
+	-webkit-transform: scale(0.8)
+	-moz-transform: scale(0.8)
+	-ms-transform: scale(0.8)
+	-o-transform: scale(0.8)
+	transform: scale(0.8)
+
+
+/* animate in */
+.my-mfp-zoom-in.mfp-ready .zoom-anim-dialog
+	opacity: 1
+
+	-webkit-transform: scale(1)
+	-moz-transform: scale(1)
+	-ms-transform: scale(1)
+	-o-transform: scale(1)
+	transform: scale(1)
+
+
+/* animate out */
+.my-mfp-zoom-in.mfp-removing .zoom-anim-dialog
+	-webkit-transform: scale(0.8)
+	-moz-transform: scale(0.8)
+	-ms-transform: scale(0.8)
+	-o-transform: scale(0.8)
+	transform: scale(0.8)
+
+	opacity: 0
+
+
+/* Dark overlay, start state */
+.my-mfp-zoom-in.mfp-bg
+	opacity: 0
+	-webkit-transition: opacity 0.3s ease-out
+	-moz-transition: opacity 0.3s ease-out
+	-o-transition: opacity 0.3s ease-out
+	transition: opacity 0.3s ease-out
+
+/* animate in */
+.my-mfp-zoom-in.mfp-ready.mfp-bg
+	opacity: 0.8
+
+/* animate out */
+.my-mfp-zoom-in.mfp-removing.mfp-bg
+	opacity: 0
+.mfp-auto-cursor .mfp-content
+  min-width: 275px
+  background-color: #fff
+  width: 50%
+
+.mfp-content
+	h1
+		color: #333333
+		font-family: "Open Sans"
+		font-size: 18px
+		font-weight: 700
+		line-height: 38px
+		text-align: center
+	label
+		color: #333333
+		font-family: "Open Sans"
+		font-size: 12px
+		font-weight: 100
+	input
+		border-radius: 2px
+		border: 1px solid #b6b6b6
+	.uk-margin
+		margin-bottom: 20px
+		&:first-child
+			margin-bottom: 10px
+	.margin-checkbox
+		.uk-form-controls
+			display: inline-block
+			margin-right: 10px
+
+		.orange
+			text-decoration: underline
+			text-align: right
+	.face-btn, .google-btn
+		color: #ffffff
+
+		font-size: 14px
+		font-weight: 700
+		border-radius: 2px
+		width: 220px
+		height: 33px
+		text-align: left
+		padding-left: 5px
+		border: none
+		display: flex
+		margin: 10px auto
+		i
+			margin-left: 10px
+			margin-right: 20px
+			font-size: 22px
+	.face-btn
+		background-color: #4065b4
+		i
+			margin-right: 27px
+
+	.google-btn
+		background-color: #4285f4
+#input-error, #input-error-card, #input-error-card-name, #input-error-card-cvv
+	color: #ff8e8e
+	font-family: "Open Sans"
+	font-size: 10px
+	display: none
+.reset-margin
+	margin: 0px !important
+.registation-page
+	width: 100%
+
+	.social-btn-group
+		padding: 18px 0px
+		.without-allow
+			color: #b6b6b6
+
+			font-size: 12px
+			line-height: 18px
+			text-align: left
+			padding: 0 37px
+	.form-block
+		text-align: left
+
+		.uk-margin
+			margin: 0px
+			height: 76px
+		#input-error-reg-email, #input-error-reg-name, #input-error-reg-pass
+			color: #ff8e8e
+
+			font-size: 10px
+			display: none
+
+
+.login-block
+	display: none
+.facebook-done-block
+	display: flex
+	flex-direction: column
+	align-items: center
+	p
+		color: #333333
+
+		font-size: 16px
+		line-height: 24px
+		text-align: center
+		margin-top: 13px
+
+	.user-block
+		p
+			color: #333333
+
+			font-size: 14px
+			font-weight: 700
+			line-height: 21px
+			text-align: center
+			margin-top: 11px
+	.cancel
+		color: #a7a7a7
+
+		font-size: 14px
+		line-height: 21px
+		text-decoration: underline
+		margin-top: 14px
+		cursor: pointer
+
+.donate-page
+	h1
+		color: #eb5a23
+		font-family: "Open Sans"
+		font-size: 28px
+		font-weight: 700
+		text-align: center
+		margin-bottom: 20px
+	h2
+		color: #333333
+
+		font-size: 18px
+		line-height: 27px
+		font-weight: 100
+		margin-bottom: 40px
+	.stage-block
+		text-align: center
+		margin-bottom: 30px
+		img
+			outline: none
+			margin: auto
+			height: 20px
+			width: 252px !important
+		.slick-track
+			display: flex
+	.donate-stage-1-block, .donate-stage-2-block
+		background-color: #fff
+		padding: 20px 28px
+		box-shadow: 0 15px 31px rgba(0, 0, 0, 0.12)
+		outline: none
+		h3
+			color: #333333
+			font-family: "Open Sans"
+			font-size: 18px
+			font-weight: 700
+			text-align: center
+			margin-bottom: 20px
+		.donate-UAH, .donate-through
+			width: 175px
+			height: 150px
+			border-radius: 4px
+			border: 2px solid #e0e0e0
+			display: flex
+			flex-direction: column
+			align-items: center
+			justify-content: center
+			position: relative
+			cursor: pointer
+			margin-bottom: 20px
+			&:hover
+				border: 2px solid #eb5a23
+
+			span
+				color: #a5aab3
+
+				font-size: 22px
+		.UAH20
+			img
+				width: 32px
+				height: 34px
+				margin-bottom: 17px
+			span
+				margin-bottom: -10px
+		.UAH50
+			img
+				width: 52px
+				height: 58px
+				margin-bottom: 17px
+
+		.UAH100
+			img
+				width: 66px
+				height: 51px
+				margin-bottom: 17px
+		.anotherUAH
+			img
+				width: 48px
+				height: 50px
+				margin-bottom: 17px
+		button
+			margin-bottom: 20px
+		.uk-margin
+			margin-top: 18px
+		.donate-section
+			display: flex
+			justify-content: space-between
+			.activeItem
+				border: 4px solid #eb5a23
+				span
+					color: #333333
+
+					font-size: 22px
+			.checkItem
+				img
+					width: 19px
+					height: 19px
+					position: absolute
+					display: none
+					top: -10px
+					right: -10px
+		.card
+			padding: 20px 30px
+			padding-bottom: 30px
+			border-radius: 7px
+			background-image: linear-gradient(180deg, #656565 0%, #333333 100%)
+			margin-bottom: 20px
+			display: none
+			input,select
+				background-image: linear-gradient(180deg, #dcdcdc 0%, #f8f8f8 34%, #ffffff 100%)
+				height: 31px
+			option
+				color: #272725
+				font-family: "Open Sans"
+				font-size: 12px
+
+			h2
+				margin: 0
+				color: #ffffff
+				font-family: "Open Sans"
+				font-size: 16px
+				font-weight: 700
+			.visa-logo
+				img
+					position: absolute
+					top: 20px
+					right: 30px
+			.uk-form-label
+				color: #ffffff
+				font-family: "Open Sans"
+				font-size: 12px
+				font-weight: 100
+			.card-date
+				display: flex
+				justify-content: space-between
+				.card-date-block
+					select
+						width: 110px
+
+				.cvv
+					width: 90px
+					border-radius: 2px
+					i
+						display: inline-block
+						float: right
+						padding: 3px
+
+
+.donate-thanks
+	background-color: #fff
+	padding: 20px
+	h2
+		color: #eb5a23
+		font-family: "Open Sans"
+		font-size: 18px
+		text-align: center
+		font-weight: 700
+	p
+		color: #333333
+
+		font-size: 16px
+		line-height: 27px
+		text-align: center
+	.back-but
+		display: block
+		margin: auto
+		width: 183px
+		height: 41px
+		border-radius: 4px
+		background-image: linear-gradient(180deg, #656565 0%, #333333 100%)
+		color: #ffffff
+
+		font-size: 14px
+		border: none
+
+.file
+	display: flex
+	align-items: baseline
+	margin-top: 9px
+	i
+		&:first-child
+			margin-right: 8px
+		&:last-child
+			margin-left: 20px
+	p
+			margin-bottom: 0
+
+.onoffswitch
+	position: relative
+	width: 43px
+	-webkit-user-select:none
+	-moz-user-select:none
+	-ms-user-select: none
+
+.onoffswitch-checkbox
+	display: none
+
+.onoffswitch-label
+	display: block
+	overflow: hidden
+	cursor: pointer
+	height: 26px
+	padding: 0
+	line-height: 26px
+	border: 2px solid #999999
+	border-radius: 26px
+	background-color: #EEEEEE
+	transition: background-color 0.3s ease-in
+
+.onoffswitch-label:before
+	content: ""
+	display: block
+	width: 26px
+	margin: 0px
+	background: #FFFFFF
+	position: absolute
+	top: -1px
+	bottom: 0
+	right: 17px
+	border: 2px solid #999999
+	border-radius: 26px
+	transition: all 0.3s ease-in 0s
+	height: 27px
+
+.onoffswitch-checkbox:checked + .onoffswitch-label
+	background-color: #eb5a23
+
+.onoffswitch-checkbox:checked + .onoffswitch-label, .onoffswitch-checkbox:checked + .onoffswitch-label:before
+	border-color: #eb5a23
+
+
+.onoffswitch-checkbox:checked + .onoffswitch-label:before
+	right: 0px
+
+.notification
+	display: none
+	.orange
+		text-decoration: underline
+		position: absolute
+		top: 20px
+		right: 20px
+		cursor: pointer
+	.notification-line
+		display: flex
+		justify-content: space-between
+		margin-top: 24px
+		p
+			color: #333333
+
+			font-size: 16px
+			line-height: 21px
+
+
+.privacy
+	display: none
+
+	input[type="checkbox"]
+		display:none
+
+
+	input[type="checkbox"] + label
+		color:#f2f2f2
+
+
+	input[type="checkbox"] + label span
+		display:inline-block
+		width: 19px
+		height: 19px
+		margin: -2px 10px 0 0
+		vertical-align: middle
+		background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/check_radio_sheet.png) left top no-repeat
+		cursor: pointer
+
+
+	input[type="checkbox"]:checked + label span
+		background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/check_radio_sheet.png) -19px top no-repeat
+
+
+	input[type="radio"]
+		display: none
+
+
+	input[type="radio"] + label
+		color: #333333
+
+		font-size: 16px
+		line-height: 21px
+
+
+	input[type="radio"] + label span
+		display: inline-block
+		width: 20px
+		height: 20px
+		margin-right: 17px
+		vertical-align: middle
+		background: #fff
+		border: 2px solid #eb5a23
+		border-radius: 100px
+		cursor: pointer
+
+
+.filled-section
+	background-color: #e5e5e5
+
+	img
+		margin-bottom: 20px
+	h1
+		color: #333333
+		font-family: "Open Sans"
+		font-size: 28px
+		font-weight: 700
+		margin-bottom: 40px
+
+.articles-empty
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2)
+	border-radius: 2px
+	background-color: #ffffff
+	padding: 20px
+	text-align: center
+	h2
+		color: #333333
+
+		font-size: 18px
+		font-weight: 700
+		line-height: 20px
+		margin-bottom: 10px
+		margin-top: 72px
+	p
+		color: #333333
+
+		font-size: 16px
+		line-height: 21px
+		margin-bottom: 88px
+
+.articles-delete
+	margin-bottom: 520px
+
+.edit-secondary-but
+	position: relative
+	display: none
+
+.logo-block
+	height: 60px
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+	background-color: #ffffff
+	padding: 17px
+	img
+		display: block
+		margin: auto
+
+.mfp-figure
+	.mfp-close
+		position: absolute
+		top: 40px
+		right: 10px
+
+.send-message
+	padding: 20px
+	text-align: center
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2)
+	border-radius: 4px
+	background-color: #ffffff
+	margin-bottom: 350px
+	h1
+		color: #eb5a23
+		font-family: "Open Sans"
+		font-size: 18px
+		font-weight: 700
+		margin-bottom: 10px
+	p
+		color: #333333
+
+		font-size: 14px
+		line-height: 27px
+		margin-bottom: 16px
+	.black-but
+		width: initial
+		padding: 5px 20px
+
+
+
+
+

@@ -1,0 +1,295 @@
+/* -------Article Page------------
+
+.article-page
+  background-color: #f2f2f2
+
+.breadcrumb-item
+  &:first-child:before
+    content: none
+  &:before
+    content: " > "
+    font-size: 12px
+    margin: 0px 5px
+  font-family: Ubuntu
+  font-size: 12px
+
+.sidebar
+  background-color: #fff
+  padding: 10px
+
+.sidebar-title
+  color: #e14424
+  font-size: 16px
+  font-weight: 700
+  text-align: center
+
+.sidebar-text
+  color: #333333
+  font-size: 14px
+  font-weight: 700
+  margin-top: 25px
+  li
+    margin-bottom: 20px
+
+.article-header .block
+  .block-header
+    color: #eb5a23
+    font-family: "Open Sans"
+    font-size: 28px
+    font-weight: 700
+    line-height: 38px
+  .block-bottom
+    position: relative
+    bottom: 0px
+    width: 100%
+
+.article-text
+  background-color: #fff
+  padding: 20px
+  h3
+    font-family: Ubuntu
+    line-height: 27px
+    color: #333333
+    font-size: 24px
+    font-weight: 700
+    text-align: center
+    display: block
+    margin-top: 40px
+  p
+    color: #333333
+    font-size: 18px
+    padding-bottom: 10px
+  span
+    border-bottom: 2px solid #ececec
+    display: block
+
+.article-bottom
+  display: grid
+  clear: both
+  margin-top: 50px
+  text-align: center
+  i
+    margin-right: 10px
+    color: #e3431c
+  p
+    color: #262626
+    font-family: Ubuntu
+    font-size: 14px
+    font-weight: 700
+  i
+    color: #e75c38
+    font-size: 20px
+    margin-right: 5px
+  a
+    // margin: 0px 3%
+    color: #a7a7a7
+    font-family: Ubuntu
+    font-size: 14px
+    font-weight: 700
+
+.comments
+  background-color: #fff
+  margin-top: 20px
+  padding-bottom: 20px
+
+.comments-header
+  color: #333333
+  font-family: "Open Sans"
+  font-size: 16px
+  font-weight: 700
+  line-height: 20px
+  text-align: center
+  padding: 20px
+  border-bottom: 2px solid #ececec
+  i
+    font-size: 20px
+    line-height: 20px
+    color: #e75c38
+
+.comments-area
+  background-color: #fff
+  display: inline-block
+  padding: 20px
+  overflow-y: scroll
+  height: 422px
+
+  
+
+\::-webkit-scrollbar
+  width: 5px
+
+  
+
+\::-webkit-scrollbar-track
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3)
+  -webkit-border-radius: 10px
+  border-radius: 10px
+
+  
+
+\::-webkit-scrollbar-thumb
+  -webkit-border-radius: 10px
+  border-radius: 10px
+  background: #9a9a9a
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5)
+  &:window-inactive
+    background: #f3f3f3
+
+.comment
+  .author-name
+    color: #333333
+    font-family: "Open Sans"
+    font-size: 14px
+    font-weight: 700
+    line-height: 20px
+    display: inline-block
+    i
+      color: #a7a7a7
+  .comment-time
+    float: right
+    display: inline-block
+    color: #b6b6b6
+    font-family: "Open Sans"
+    font-size: 12px
+    line-height: 20px
+  .comment-text
+    display: block
+    padding-top: 10px
+  display: inline-block
+  margin-bottom: 20px
+
+.comments input
+  border-radius: 2px
+  border: 1px solid #c0c0c0
+  width: 95%
+  display: block
+  margin: 0 auto
+  padding: 10px
+  &::placeholder
+    color: #c0c0c0
+    font-family: Ubuntu
+    font-size: 14px
+    font-style: italic
+
+.donate
+  margin-top: 20px
+  text-align: center
+  .block-header
+    color: #333333
+    font-family: "Open Sans"
+    font-size: 24px
+    font-weight: 700
+    line-height: 38px
+  .block-description
+    font-family: Ubuntu
+    font-size: 18px
+    line-height: 24px
+    color: #333333
+    padding-bottom: 20px
+    span
+      margin-left: 5px
+
+.article-page
+  padding-bottom: 40px
+
+.sidebar
+  margin-bottom: 20px
+
+.expert-opinion-top-block
+  height: 233px
+  background: #333333
+  text-align: center
+  color: #fff
+  .breadcrumb
+    text-align: left
+  .breadcrumb-item
+    color: #fff
+  h1
+    color: #ffffff
+    font-family: "Open Sans"
+    font-size: 28px
+    font-weight: 700
+  h2
+    color: #ffffff
+    font-family: Ubuntu
+    font-size: 18px
+    line-height: 25px
+
+.expert-opinion-page
+  background-color: #f2f2f2
+
+.expert-opinion-tags-block
+  padding: 20px 0px
+
+.tags-block-title
+  color: #262626
+  font-family: Ubuntu
+  font-size: 14px
+  padding: 0px 10px
+
+.expert-opinion-tags-block .actual-tags
+  display: inline-block
+  li
+    display: inline-block
+    padding: 2px 10px
+    background-color: #4d4d4d
+    border-radius: 10px
+    a
+      color: #ffffff
+      font-family: Ubuntu
+      font-size: 14px
+
+.expert-opinion-right-tags
+  display: inline-block
+  float: right
+  .sort
+    border-radius: 100px
+    border: 1px solid #e0e0e0
+    background-color: #ffffff
+    width: 165px
+    color: #a7a7a7
+  .tags
+    height: 34px
+    border-radius: 100px
+    background-color: #333333
+    color: #fff
+    span
+      color: #fff
+
+.expert-opinion-page .image-wide-block
+  margin-bottom: 20px
+  .block
+    position: absolute
+    top: 40%
+    background-color: transparent
+    .block-header
+      color: #f2f2f2
+      font-family: "Open Sans"
+      font-size: 24px
+      font-weight: 700
+      line-height: 36px
+    .author a
+      color: #a7a7a7
+      font-family: Ubuntu
+      font-size: 14px
+
+.moreArticles
+  background-color: #333333
+  .article-block__image
+    height: 70%
+    background-size: inherit
+    display: block
+  .block
+    background-color: #333333
+    width: 95%
+    position: absolute
+    overflow: hidden
+    bottom: 175px
+    text-align: center
+    .but
+      i
+      margin-right: 5px
+      color: #ffffff
+      font-family: Ubuntu
+      font-size: 14px
+

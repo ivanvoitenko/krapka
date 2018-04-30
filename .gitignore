@@ -1,0 +1,12 @@
+# Include your project-specific ignores in this file
+# Read about how to use .gitignore: https://help.github.com/articles/ignoring-files
+.idea
+.DS_Store
+.well-known
+bower_components
+node_modules
+**/krapka/vendor
+npm-debug.log
+wp-config-local.php
+package-lock.json
+wp-content/languages

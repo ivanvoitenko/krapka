@@ -1,0 +1,108 @@
+.mfp-wrap {
+  &.register-block .mfp-content,
+  &.login-popup .mfp-content {
+    width: 590px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    background-color: #ffffff;
+    padding-bottom: 25px;
+
+    .social-btn-group {
+      padding: 17px 0;
+
+      &:before {
+        right: 0;
+      }
+    }
+
+    .enter-block {
+      font-family: "Open Sans";
+      font-size: 12px;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+      align-items: center;
+
+      .but {
+        width: 78px;
+        margin: 0;
+      }
+
+      a {
+        text-decoration: underline;
+        color: $orange;
+      }
+
+
+    }
+
+    .form-block {
+      padding-left: 34px;
+      padding-right: 20px;
+
+      label {
+        margin-bottom: 5px;
+        display: inline-block;
+      }
+
+      &:before {
+        left: 0;
+      }
+
+
+    }
+
+      .social-btn-group,
+    .form-block {
+      position: relative;
+
+      &:before {
+        content: '';
+        height: 176px;
+        width: 1px;
+        background: $grey-lighter;
+        top: 0;
+        position: absolute;
+      }
+    }
+  }
+
+  .popup-title {
+    color: #333333;
+    font-family: "Open Sans";
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 38px;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+}
+
+.tags-list {
+  display: none;
+
+
+}
+
+.fb-login-popup {
+
+  .title {
+    color: #333333;
+    font-family: "Open Sans";
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 38px;
+  }
+  .img {
+    width: 100px;
+    height: 100px;
+    margin: 12px auto 0;
+    background-size: cover;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+  }
+}
+
+.mfp-wrap.login-popup .mfp-content {
+  padding-top: 8px;
+}

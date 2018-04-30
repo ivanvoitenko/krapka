@@ -1,0 +1,6 @@
+.wp-editor h2 a[href^="#"] {
+  display: inline-block;
+  padding-left: 30px;
+  background: url(./dist/images/bookmark.svg) 0 5px no-repeat;
+  background-size: 25px;
+}
